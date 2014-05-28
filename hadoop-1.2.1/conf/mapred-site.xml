@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+  <property>
+    <name>mapred.job.tracker</name>
+    <value>###HADOOP_MASTER###:9001</value>
+  </property>
+
+  <property>
+    <name>slave.host.name</name>
+    <value>###EXTERNAL_IP_ADDRESS###</value>
+  </property>
+
+  <property>
+    <name>hadoop.job.history.location</name>
+    <value>file:///hadoop/mapred/history</value>
+    <description>hdfs:// is UNusable.</description>
+  </property>
+
+  <property>
+    <name>mapred.job.tracker.history.completed.location</name>
+    <value>hdfs:///mapred/history/done</value>
+  </property>
+
+  <property>
+    <name>mapred.job.tracker.http.address</name>
+    <value>0.0.0.0:50030</value>
+  </property>
+
+  <property>
+    <name>mapred.tasktracker.map.tasks.maximum</name>
+    <value>8</value>
+  </property>
+
+  <property>
+    <name>mapred.tasktracker.reduce.tasks.maximum</name>
+    <value>8</value>
+  </property>
+
+</configuration>

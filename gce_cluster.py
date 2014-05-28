@@ -62,8 +62,8 @@ class GceCluster(object):
   the way Hadoop uses for communication.)
   """
 
-  CLIENT_ID = '{{{{ client_id }}}}'
-  CLIENT_SECRET = '{{{{ client_secret }}}}'
+  CLIENT_ID = '403435461029-jk8ckp6kc24t0sjetsl2tl8ql8omfnrm.apps.googleusercontent.com'
+  CLIENT_SECRET = 'yX_2OjerUFWmw9B4IOYmEK42'
 
   DEFAULT_ZONE = 'us-central1-a'
   DEFAULT_IMAGE = ('projects/debian-cloud/global/images/'

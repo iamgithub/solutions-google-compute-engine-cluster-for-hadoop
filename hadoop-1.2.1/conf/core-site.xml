@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+  <property>
+    <name>fs.default.name</name>
+    <value>hdfs://###HADOOP_MASTER###:9000</value>
+  </property>
+
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>/hadoop/tmp</value>
+  </property>
+
+  <property>
+    <name>fs.checkpoint.dir</name>
+    <value>/hadoop/checkpoint</value>
+  </property>
+
+</configuration>
