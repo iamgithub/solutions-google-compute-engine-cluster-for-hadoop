@@ -1,0 +1,16 @@
+gcloud auth login
+
+./compute_cluster_for_hadoop.py setup cryptic-lattice-427 hadoop_packages
+./compute_cluster_for_hadoop.py start cryptic-lattice-427 hadoop_packages
+
+gsutil mb gs://hadoop_output
+
+./compute_cluster_for_hadoop.py mapreduce cryptic-lattice-427 hadoop_packages --input gs://hadoop_input --output gs://hadoop_output --mapper sample/shortest-to-longest-mapper.pl --reducer sample/shortest-to-longest-reducer.pl --mapper-count 5 --reducer-count 1
+
+
+./compute_cluster_for_hadoop.py mapreduce cryptic-lattice-427 hadoop_packages --input gs://hadoop_input --output gs://hadoop_output --mapper sample/shortest-to-longest-mapper.py --reducer sample/shortest-to-longest-reducer.py --mapper-count 5 --reducer-count 1
+
+Login to master:
+gcutil --service_version="v1" --project="cryptic-lattice-427" ssh --zone="us-central1-a" "hm"
+
+
